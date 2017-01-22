@@ -19,7 +19,7 @@ PRIVATE_KEY="XXXXXXXXXXXXXXXXXXXzzzzzzzzzzzzzzzzzzzzz"
 
 CAPTCHA="$(sed 's/recaptcha_//g;s/_field//g')"
 
-RESP=`echo CAPTCHA | cut -d "&" -f1 | cut -d"=" -f2`
+RESP=`echo $CAPTCHA | cut -d "&" -f1 | cut -d"=" -f2`
 PK=$PRIVATE_KEY
 
 END="https://www.google.com/recaptcha/api/siteverify?secret=$PK&response=$RESP"
@@ -29,7 +29,7 @@ RESULT=`curl $END`
 
 CHECK=$(echo $RESULT | cut -d ":" -f2 | cut -d "," -f1)
 if [ $CHECK = "true" ]; then
-  echo "use sua imaginação humana aqui/Use your human imagination here"
+  echo "use sua criatividade humana aqui/Use your human creativity here"
   exit 0
 fi
 
