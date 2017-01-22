@@ -29,7 +29,7 @@ RESULT=`curl $END`
 
 CHECK=$(echo $RESULT | cut -d ":" -f2 | cut -d "," -f1)
 if [ $CHECK = "true" ]; then
-  echo "use sua criatividade humana aqui/Use your human creativity here"
+  echo "Use sua criatividade humana aqui. Use your human creativity here"
   exit 0
 fi
 
