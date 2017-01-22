@@ -1,33 +1,27 @@
 #!/bin/bash
 
-#----------------------------------------------------------#
-# Project: recaptha-google-cgishell		 	                   #
-# CREATED BY: maik.alberto@hotmail.com		                 #
-# Soure: https://github.com/m41k/recaptha-google-cgishell  #
-#----------------------------------------------------------#
+#-----------------------------------------------------------#
+# Project: recaptha-google-cgishell                         #
+# CREATED BY: maik.alberto@hotmail.com                      #
+# Soure: https://github.com/m41k/recaptha-google-cgishell   #
+#-----------------------------------------------------------#
 
 echo -e "Content-type: text/html\n\n"
 
-ACTIN=`echo $0 | rev | cut -d / -f1 | rev`
-
 ############################################################
-#           Insira suas chaves/Insert your keys            #
+#          Insira suas chaves/Insert your keys             #
 ############################################################
 
 PUBLIC_KEY="XXXXXXXXXXXXXXXXXXXXyyyyyyyyyyyyyyyyyyyyy"
 PRIVATE_KEY="XXXXXXXXXXXXXXXXXXXzzzzzzzzzzzzzzzzzzzzz"
 
+ACTIN=`echo $0 | rev | cut -d / -f1 | rev`
 CAPTCHA="$(sed 's/recaptcha_//g;s/_field//g')"
-
 RESP=`echo $CAPTCHA | cut -d "&" -f1 | cut -d"=" -f2`
-PK=$PRIVATE_KEY
-
-END="https://www.google.com/recaptcha/api/siteverify?secret=$PK&response=$RESP"
-
+END="https://www.google.com/recaptcha/api/siteverify?secret=$PRIVATE_KEY&response=$RESP"
 RESULT=`curl $END`
-
-
 CHECK=$(echo $RESULT | cut -d ":" -f2 | cut -d "," -f1)
+
 if [ $CHECK = "true" ]; then
   echo "Use sua criatividade humana aqui. Use your human creativity here"
   exit 0
@@ -52,3 +46,5 @@ cat <<EOF
 </html>
 
 EOF
+
+#Have Fun!
