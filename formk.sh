@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#-----------------------------------------------------------#
-# Project: recaptha-google-cgishell                         #
-# CREATED BY: maik.alberto@hotmail.com                      #
-# Soure: https://github.com/m41k/recaptha-google-cgishell   #
-#-----------------------------------------------------------#
+#----------------------------------------------------------#
+# Project: recaptha-google-cgishell                        #
+# CREATED BY: maik.alberto@hotmail.com                     #
+# Soure: https://github.com/m41k/recaptha-google-cgishell  #
+#----------------------------------------------------------#
 
 echo -e "Content-type: text/html\n\n"
 
