@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #----------------------------------------------------------#
-# Project: recaptha-google-cgishell                        #
+# Project: recaptcha-google-cgishell                       #
 # CREATED BY: maik.alberto@hotmail.com                     #
 # Soure: https://github.com/m41k/recaptha-google-cgishell  #
 #----------------------------------------------------------#
