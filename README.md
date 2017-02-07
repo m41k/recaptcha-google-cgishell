@@ -1,2 +1,2 @@
-# recaptha-google-cgishell
+# recaptcha-google-cgishell
 Google reCAPTCHA CGI-Shell
